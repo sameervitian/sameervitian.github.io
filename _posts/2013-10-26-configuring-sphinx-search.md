@@ -4,13 +4,16 @@ title: "Configuring Sphinx Search"
 description: ""
 categories: ["technology"]
 tags: [sphinx, search]
+
 ---
+
 {% include JB/setup %}
 
 ## Overview
   Sphinx is full-text search engine build in C++. All modern unix system which have C++ compiler should be able to compile and run Sphinx.
 
 ## Installing Sphinx on Ubuntu  
+
   + ### Prerequisites  
     Install the required dependencies
 
@@ -23,7 +26,7 @@ tags: [sphinx, search]
   + ### Configure and Install
 
         > cd sphinx-2.1.2-release
-        > ./configure --prefix=/usr/local/sphinx
+        > ./configure --prefix=/usr/local/sphinx  
 
     _Note: The prefix switch determines the location of sphinx installation._
 
