@@ -10,23 +10,23 @@ tags: [sphinx, search]
 ## Overview
   Sphinx is full-text search engine build in C++. All modern unix system which have C++ compiler should be able to compile and run Sphinx.
 
-## Installing Sphinx on Ubuntu
-  - ### Prerequisites  
+## Installing Sphinx on Ubuntu  
+  + ### Prerequisites  
     Install the required dependencies
 
         > sudo apt-get install libmysql++-dev libmysqlclient15-dev checkinstall
-  - ### Download and extract sphinx code
+  + ### Download and extract sphinx code
 
         > wget http://sphinxsearch.com/files/sphinx-2.1.2-release.tar.gz    
         > tar -xvzf sphinx-2.1.2-release.tar.gz  
 
-  - ### Configure and Install
+  + ### Configure and Install
 
         > cd sphinx-2.1.2-release
         > ./configure --prefix=/usr/local/sphinx
 
     _Note: The prefix switch determines the location of sphinx installation._
-        
+
         > make -j4
         > sudo make install
 
