@@ -14,7 +14,7 @@ tags: [sphinx, search]
 
 ## Installing Sphinx on Ubuntu
 
-  +### Prerequisites
+  ### Prerequisites
   
     Install the required dependencies
 
