@@ -15,6 +15,7 @@ tags: [sphinx, search]
 ## Installing Sphinx on Ubuntu
 
   +### Prerequisites
+  
     Install the required dependencies
 
         > sudo apt-get install libmysql++-dev libmysqlclient15-dev checkinstall
