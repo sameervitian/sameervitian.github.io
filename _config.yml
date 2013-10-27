@@ -16,6 +16,9 @@ author :
   github : sameervitian
   twitter : 
   feedburner : 
+  linkedin : sameerakhtar
+  facebook : sameervitian2006
+  googleplus: u/0/114666152374823203815
 
 # The production_url is only used when full-domain names are needed
 # such as sitemap.txt 
@@ -100,7 +103,7 @@ JB :
   analytics :
     provider : google 
     google : 
-        tracking_id : 'UA-123-12'
+        tracking_id : 'UA-37635358-2'
     getclicky :
       site_id : 
     mixpanel :
