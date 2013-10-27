@@ -136,53 +136,53 @@ tags: [sphinx, search]
 ## Index Creation and Querying the index
   We are ready to index the dataset once spinx configuration file is ready.  
 
-      > cd /usr/local/sphinx/bin
-      > sudo ./indexer --all -c <path to sphinx.conf file>
+    > cd /usr/local/sphinx/bin
+    > sudo ./indexer --all -c <path to sphinx.conf file>
 
   following log will appear on the screen if the indexing is properly done.
 
-      Sphinx 2.0.6-release (r3473)
-      Copyright (c) 2001-2012, Andrew Aksyonoff
-      Copyright (c) 2008-2012, Sphinx Technologies Inc (http://sphinxsearch.com)
+    Sphinx 2.0.6-release (r3473)
+    Copyright (c) 2001-2012, Andrew Aksyonoff
+    Copyright (c) 2008-2012, Sphinx Technologies Inc (http://sphinxsearch.com)
 
-      using config file 'sphinx.conf'...
-      indexing index 'idx1'...
-      collected 1202 docs, 0.0 MB
-      sorted 0.0 Mhits, 100.0% done
-      total 1202 docs, 207 bytes
-      total 0.047 sec, 4351 bytes/sec, 25266.43 docs/sec
-      total 3 reads, 0.000 sec, 5.2 kb/call avg, 0.0 msec/call avg
-      total 9 writes, 0.000 sec, 3.4 kb/call avg, 0.0 msec/call avg
+    using config file 'sphinx.conf'...
+    indexing index 'idx1'...
+    collected 1202 docs, 0.0 MB
+    sorted 0.0 Mhits, 100.0% done
+    total 1202 docs, 207 bytes
+    total 0.047 sec, 4351 bytes/sec, 25266.43 docs/sec
+    total 3 reads, 0.000 sec, 5.2 kb/call avg, 0.0 msec/call avg
+    total 9 writes, 0.000 sec, 3.4 kb/call avg, 0.0 msec/call avg
 
   The indexes will be created in the location `/usr/local/sphinx/var/data`.
 
 
   Once the indexes are created our task is almost done. All we need is to run the `searchd` daemon and query the index.
 
-      > cd /usr/local/sphinx/bin
-      > sudo ./searchd -c <path to sphinx.conf file>
+    > cd /usr/local/sphinx/bin
+    > sudo ./searchd -c <path to sphinx.conf file>
   Folowing logs will appear on screen on successful execution of searchd
 
-      Sphinx 2.0.6-release (r3473)
-      Copyright (c) 2001-2012, Andrew Aksyonoff
-      Copyright (c) 2008-2012, Sphinx Technologies Inc (http://sphinxsearch.com)
+    Sphinx 2.0.6-release (r3473)
+    Copyright (c) 2001-2012, Andrew Aksyonoff
+    Copyright (c) 2008-2012, Sphinx Technologies Inc (http://sphinxsearch.com)
 
-      using config file 'sphinx.conf'...
-      WARNING: compat_sphinxql_magics=1 is deprecated; please update your application and config
-      listening on all interfaces, port=9312
-      listening on all interfaces, port=9306
-      precaching index 'idx1'
-      precached 1 indexes in 0.001 sec 
+    using config file 'sphinx.conf'...
+    WARNING: compat_sphinxql_magics=1 is deprecated; please update your application and config
+    listening on all interfaces, port=9312
+    listening on all interfaces, port=9306
+    precaching index 'idx1'
+    precached 1 indexes in 0.001 sec 
 
 
   Sphinx searchd daemon supports MySQL binary network protocol and can be accessed with regular MySQL API.
 
-      > mysql -P 9306 --protocol=tcp
+    > mysql -P 9306 --protocol=tcp
       
   Now query the index through the MySQL console.
 
-      > select * from `idx1`;
-      > select * from `idx1` WHERE MATCH ('sameer');
+    > select * from `idx1`;
+    > select * from `idx1` WHERE MATCH ('sameer');
 
 
   This is it :) 
