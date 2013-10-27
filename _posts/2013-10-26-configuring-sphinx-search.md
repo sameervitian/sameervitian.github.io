@@ -143,7 +143,7 @@ tags: [sphinx, search]
       Copyright (c) 2001-2012, Andrew Aksyonoff
       Copyright (c) 2008-2012, Sphinx Technologies Inc (http://sphinxsearch.com)
 
-      using config file 'sphinx_catalog.conf'...
+      using config file 'sphinx.conf'...
       indexing index 'idx1'...
       collected 1202 docs, 0.0 MB
       sorted 0.0 Mhits, 100.0% done
@@ -165,7 +165,7 @@ tags: [sphinx, search]
       Copyright (c) 2001-2012, Andrew Aksyonoff
       Copyright (c) 2008-2012, Sphinx Technologies Inc (http://sphinxsearch.com)
 
-      using config file 'sphinx_catalog.conf'...
+      using config file 'sphinx.conf'...
       WARNING: compat_sphinxql_magics=1 is deprecated; please update your application and config
       listening on all interfaces, port=9312
       listening on all interfaces, port=9306
@@ -187,14 +187,6 @@ tags: [sphinx, search]
 
 ## In Conclusion 
   I hope this helps you in configuring and running sphinx. I have just scratched the surface here and this blog doesn't attempt to cover all the details.
-
-
-
-
-
-
-  
-
 
 
 
