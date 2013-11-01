@@ -2,7 +2,7 @@
 layout: post
 title: "Configuring Sphinx Search"
 description: ""
-categories: ["tech", "technology"]
+categories: ["technology"]
 tags: [sphinx, search]
 
 ---
