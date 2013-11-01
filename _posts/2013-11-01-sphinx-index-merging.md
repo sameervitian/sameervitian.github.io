@@ -107,7 +107,7 @@ tags: [sphinx, search]
 
   Once `delta` is merged to `main` an update is done to `delta_count` table - 
 
-    sql > REPLACE INTO delta_count  SELECT 1, max_id FROM delta_count where id = 2
+    sql > REPLACE INTO delta_count  SELECT 1, max_id FROM delta_count where id = 2;
 
   The sql above makes indexer to index only newly populated data in `delta` index.
 
